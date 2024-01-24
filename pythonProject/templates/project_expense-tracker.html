@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <main class="main main-project">
+      <div>
+          <img
+              class="hero"
+              src="{{ url_for('static', filename=project['hero']) }}"
+              alt="Expense tracker app"/>
+
+          <article class="project">
+              <article class="project__content">
+                  <h2 class="project__heading">{{ project['name'] }}</h2>
+                      <p>
+                          THIS IS A SMALL APP FOR TRACKING YOUR SPENDINGS. IT ALLOWS TO ADD USERS, DELETE EXISTENT USERS AND
+                          TO WRITE DOWN SPENDINGS FOR FOUR DIFFERENT CATEGORIES, AT CERTAIN DATES.
+                      </p>
+              </article>
+              <section>
+                  <article class="project__meta-group">
+                      <h3 class="project__heading project__heading--meta">Technologies used</h3>
+                      <ul class="technology-list">
+                          <li class="technology-list__item">Python</li>
+                      </ul>
+                  </article>
+
+                  <a class="cta" href="{{ project['prod'] }}">
+                      <img class="cta__icon" src="/static/images/pointer.svg">
+                      View in Production
+                  </a>
+              </section>
+          </article>
+      </div>
+  </main>
+
+
+{% endblock %}
