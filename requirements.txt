@@ -1,0 +1,4 @@
+Flask~=3.0.0
+gunicorn
+pymongo[srv]==3.11
+
